@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://maxmotodetailing.com/</loc>
+    <loc>https://max-moto.vercel.app/</loc>
     <lastmod>2026-04-02</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://maxmotodetailing.com/index.html</loc>
+    <loc>https://max-moto.vercel.app/index.html</loc>
     <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maxmotodetailing.com/ceramic-coating.html</loc>
+    <loc>https://max-moto.vercel.app/ceramic-coating.html</loc>
     <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maxmotodetailing.com/paint-protection-film.html</loc>
+    <loc>https://max-moto.vercel.app/paint-protection-film.html</loc>
     <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maxmotodetailing.com/interior-detailing.html</loc>
+    <loc>https://max-moto.vercel.app/interior-detailing.html</loc>
     <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maxmotodetailing.com/window-tint.html</loc>
+    <loc>https://max-moto.vercel.app/window-tint.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://max-moto.vercel.app/contact.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://max-moto.vercel.app/about.html</loc>
     <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
   </url>
