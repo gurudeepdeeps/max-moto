@@ -457,7 +457,8 @@
               <textarea id="message" name="message" rows="4"
                 placeholder="Tell us about your car and what you need..."></textarea>
             </div>
-            <button type="submit" class="btn-connect btn-submit">Send message <span>→</span></button>
+            <button type="submit" class="btn-connect btn-submit" id="submitBtn">Send message <span>→</span></button>
+            <div id="result" class="form-result"></div>
           </form>
         </div>
       </div>
@@ -604,6 +605,58 @@
         }
       });
     });
+
+    // ===== FORM SUBMISSION WITH FETCH =====
+    const contactForm = document.getElementById('contactForm');
+    const result = document.getElementById('result');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Sending...";
+        result.style.color = "rgba(255, 255, 255, 0.5)";
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.5";
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.innerHTML = "Message Sent Successfully!";
+              result.style.color = "#00ff88"; // Success green
+              contactForm.reset();
+            } else {
+              console.log(response);
+              result.innerHTML = json.message;
+              result.style.color = "#ff4444"; // Error red
+            }
+          })
+          .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+            result.style.color = "#ff4444";
+          })
+          .then(function () {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+            setTimeout(() => {
+              result.innerHTML = "";
+            }, 5000);
+          });
+      });
+    }
   </script>
 
 </body>

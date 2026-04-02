@@ -276,7 +276,7 @@
           <div class="contact-form-wrap">
             <h3 style="font-family: 'Clash Display', sans-serif; font-size: 2rem; margin-bottom: 40px;">Send a Message
             </h3>
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
               <!-- Replace with your actual Access Key from web3forms.com -->
               <input type="hidden" name="access_key" value="89d21070-07f4-4756-893f-d3f1614bd251">
               <input type="hidden" name="from_name" value="Max Moto Detailing Inquiry">
@@ -309,8 +309,9 @@
                 <textarea name="message" class="form-control" placeholder="Tell us about your vehicle..."
                   required></textarea>
               </div>
-              <button type="submit" class="btn-connect btn-primary"
+              <button type="submit" class="btn-connect btn-primary" id="submitBtn"
                 style="width: 100%; justify-content: center; border: none; cursor: pointer;">Send Message</button>
+              <div id="result" class="form-result"></div>
             </form>
           </div>
         </div>
@@ -398,20 +399,59 @@
       }
     });
 
-    // ===== SCROLL REVEAL ANIMATION =====
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // ===== FORM SUBMISSION WITH FETCH =====
+    const contactForm = document.getElementById('contactForm');
+    const result = document.getElementById('result');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Sending...";
+        result.style.color = "rgba(255, 255, 255, 0.5)";
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.5";
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.innerHTML = "Message Sent Successfully!";
+              result.style.color = "#00ff88"; // Success green
+              contactForm.reset();
+            } else {
+              console.log(response);
+              result.innerHTML = json.message;
+              result.style.color = "#ff4444"; // Error red
+            }
+          })
+          .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+            result.style.color = "#ff4444";
+          })
+          .then(function () {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+            setTimeout(() => {
+              result.innerHTML = "";
+            }, 5000);
+          });
+      });
+    }
   </script>
 </body>
 
