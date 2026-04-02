@@ -276,32 +276,38 @@
           <div class="contact-form-wrap">
             <h3 style="font-family: 'Clash Display', sans-serif; font-size: 2rem; margin-bottom: 40px;">Send a Message
             </h3>
-            <form action="#">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <!-- Replace with your actual Access Key from web3forms.com -->
+              <input type="hidden" name="access_key" value="89d21070-07f4-4756-893f-d3f1614bd251">
+              <input type="hidden" name="from_name" value="Max Moto Detailing Inquiry">
+              <input type="hidden" name="subject" value="New Inquiry from Contact Page">
+
               <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" class="form-control" placeholder="John Doe" required>
+                <input type="text" name="name" class="form-control" placeholder="John Doe" required>
               </div>
               <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" class="form-control" placeholder="john@example.com" required>
+                <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
               </div>
               <div class="form-group">
                 <label>Phone Number</label>
-                <input type="tel" class="form-control" placeholder="+91 00000 00000">
+                <input type="tel" name="phone" class="form-control" placeholder="+91 63627 60386">
               </div>
               <div class="form-group">
                 <label>Select Service</label>
-                <select class="form-control">
-                  <option>Ceramic Coating</option>
-                  <option>Paint Protection Film</option>
-                  <option>Interior Detailing</option>
-                  <option>Window Tinting</option>
-                  <option>General Inquiry</option>
+                <select name="service" class="form-control">
+                  <option value="Ceramic Coating">Ceramic Coating</option>
+                  <option value="Paint Protection Film">Paint Protection Film</option>
+                  <option value="Interior Detailing">Interior Detailing</option>
+                  <option value="Window Tinting">Window Tinting</option>
+                  <option value="General Inquiry">General Inquiry</option>
                 </select>
               </div>
               <div class="form-group">
                 <label>Message</label>
-                <textarea class="form-control" placeholder="Tell us about your vehicle..."></textarea>
+                <textarea name="message" class="form-control" placeholder="Tell us about your vehicle..."
+                  required></textarea>
               </div>
               <button type="submit" class="btn-connect btn-primary"
                 style="width: 100%; justify-content: center; border: none; cursor: pointer;">Send Message</button>
