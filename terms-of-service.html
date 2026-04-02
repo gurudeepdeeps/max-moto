@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms Of Service — Max Moto Detailing</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .legal-hero {
+      padding: 180px 0 80px;
+      background: #000;
+      text-align: center;
+    }
+    .legal-content {
+      padding-bottom: 100px;
+      line-height: 1.8;
+      color: #888;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .legal-content h2 {
+      color: #fff;
+      font-family: 'Clash Display', sans-serif;
+      margin: 40px 0 20px;
+    }
+    .legal-content p {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Max Moto Detailing Logo">
+        Max Moto Detailing
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-quote">Get a quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="legal-hero">
+    <div class="container">
+      <h1 style="font-family: 'Clash Display', sans-serif; font-size: 3.5rem;">Terms Of Service</h1>
+      <p style="color: #555; margin-top: 20px;">Last Updated: April 2, 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-content">
+    <div class="container">
+      <div class="reveal">
+        <h2>1. Service Agreement</h2>
+        <p>By booking a detailing service with Max Moto Detailing, you agree to the terms and conditions outlined here. We reserve the right to modify these terms at any time without prior notice.</p>
+        
+        <h2>2. Bookings & Cancellations</h2>
+        <p>All bookings require a 24-hour notice for cancellation or rescheduling. Failure to provide adequate notice may result in a non-refundable deposit for future bookings.</p>
+
+        <h2>3. Liability</h2>
+        <p>Max Moto Detailing is not responsible for any pre-existing mechanical issues or damage to your vehicle. While we take every precaution to protect your asset, owners are advised to remove valuables before detailing.</p>
+
+        <h2>4. Satisfaction Guarantee</h2>
+        <p>Your satisfaction is our priority. If you are not satisfied with our level of service, please inform us within 24 hours of vehicle delivery for any necessary adjustments.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Max Moto Detailing Logo">
+            Max Moto Detailing
+          </a>
+          <p>Experience the prestige of a professionally detailed car, radiating elegance and refinement at every turn.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Website</h4>
+            <ul>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Social media</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">Max Moto Detailing &copy; 2026</span>
+        <div class="footer-legal">
+          <a href="cookies-policy.html">Cookies policy</a>
+          <a href="terms-of-service.html">Terms of service</a>
+          <a href="privacy-policy.html">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

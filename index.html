@@ -5,8 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Max Moto Detailing — Luxury Car Detailing</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
   <meta name="description"
     content="Experience the prestige of a professionally detailed car, radiating elegance and refinement at every turn. Premium car detailing services.">
+
+  <!-- SEO & Social Meta Tags -->
+  <link rel="canonical" href="https://maxmotodetailing.com/">
+  <meta property="og:title" content="Max Moto Detailing — Luxury Car Detailing">
+  <meta property="og:description" content="Experience the prestige of a professionally detailed car with premium detailing services.">
+  <meta property="og:image" content="https://maxmotodetailing.com/images/hero-car.png">
+  <meta property="og:url" content="https://maxmotodetailing.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Max Moto Detailing — Luxury Car Detailing">
+  <meta name="twitter:description" content="Premium car detailing services for those who value excellence.">
+  <meta name="twitter:image" content="https://maxmotodetailing.com/images/hero-car.png">
+
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +36,17 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="nav-logo"><img src="images/logo.png" alt="Max Moto Detailing Logo">Max Moto Detailing</a>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Max Moto Detailing Logo">
+        Max Moto Detailing
+      </a>
 
       <div class="nav-menu" id="navMenu">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="btn-quote">Get a quote</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-quote">Get a quote</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -46,7 +63,7 @@
       <h1>Luxury car detailing</h1>
       <p>Experience the prestige of a professionally detailed car, radiating elegance and refinement at every turn.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-connect btn-primary">Let's connect <span>→</span></a>
+        <a href="contact.html" class="btn-connect btn-primary">Let's connect <span>→</span></a>
         <a href="#services" class="btn-connect secondary">View services</a>
       </div>
     </div>
@@ -60,53 +77,79 @@
 
   <!-- ===== SERVICES SECTION ===== -->
   <section class="services" id="services">
-    <div class="container">
-      <div class="services-header">
-        <div class="services-header-left reveal">
-          <span class="label">Our Services</span>
-          <h2>Love in Every Detail</h2>
-        </div>
-        <div class="services-header-right reveal reveal-delay-1">
-          <p>Immerse yourself in luxury with our bespoke detailing packages tailored to your car's unique needs.</p>
-        </div>
+    <div class="container services-outer-container reveal">
+      <div class="services-header-new">
+        <h2><span class="bold">ALL</span> Services</h2>
       </div>
 
-      <div class="services-grid">
-        <!-- Card 1 -->
-        <div class="service-card reveal reveal-delay-1">
-          <div class="card-image">
-            <img src="images/card-convertible.jpg" alt="Luxury convertible sports car in studio" loading="lazy">
+      <div class="services-grid-new">
+        <!-- Service 1: Ceramic Coating -->
+        <a href="ceramic-coating.html" class="service-card-new reveal reveal-delay-1">
+          <div class="card-bg-image">
+            <img src="images/card-amg.jpg" alt="Luxury car with ceramic coating" loading="lazy">
           </div>
-          <div class="card-content">
-            <h3>Entry level detail</h3>
-            <p>Treat your car with a thorough hand wash and careful attention.</p>
-            <a href="#" class="card-link">Learn more <span>→</span></a>
+          <div class="card-overlay"></div>
+          <div class="card-info-new">
+            <h3>Ceramic Coating</h3>
+            <div class="card-arrow-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 2 -->
-        <div class="service-card reveal reveal-delay-2">
-          <div class="card-image">
-            <img src="images/card-amg.jpg" alt="Black AMG luxury car in dark studio" loading="lazy">
+        <!-- Service 2: Paint Protection Film -->
+        <a href="paint-protection-film.html" class="service-card-new reveal reveal-delay-2">
+          <div class="card-bg-image">
+            <img src="images/ppf-intro.png" alt="Car with PPF installation" loading="lazy">
           </div>
-          <div class="card-content">
-            <h3>Maintenance detail</h3>
-            <p>Ensure your car's longevity with regular periodic cleaning and protection.</p>
-            <a href="#" class="card-link">Learn more <span>→</span></a>
+          <div class="card-overlay"></div>
+          <div class="card-info-new">
+            <h3>Paint Protection Film</h3>
+            <div class="card-arrow-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 3 -->
-        <div class="service-card reveal reveal-delay-3">
-          <div class="card-image">
-            <img src="images/card-sedan.jpg" alt="Luxury black sedan close angle shot" loading="lazy">
+        <!-- Service 3: Interior Detailing -->
+        <a href="interior-detailing.html" class="service-card-new reveal reveal-delay-1">
+          <div class="card-bg-image">
+            <img src="images/interior-hero.png" alt="Luxury car interior detailing" loading="lazy">
           </div>
-          <div class="card-content">
-            <h3>Full detail</h3>
-            <p>Pamper your vehicle with complete restoration leaving no detail untouched.</p>
-            <a href="#" class="card-link">Learn more <span>→</span></a>
+          <div class="card-overlay"></div>
+          <div class="card-info-new">
+            <h3>Interior Detailing</h3>
+            <div class="card-arrow-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
           </div>
-        </div>
+        </a>
+
+        <!-- Service 4: Window Tint -->
+        <a href="window-tint.html" class="service-card-new reveal reveal-delay-2">
+          <div class="card-bg-image">
+            <img src="images/car-sedan.png" alt="Premium window tinting" loading="lazy">
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-info-new">
+            <h3>Window Tint</h3>
+            <div class="card-arrow-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -358,9 +401,11 @@
       <div class="footer-top">
         <!-- Brand Column -->
         <div class="footer-brand">
-          <a href="#" class="nav-logo"><img src="images/logo.png" alt="Max Moto Detailing Logo">Max Moto Detailing</a>
-          <p>Experience the prestige of a professionally detailed car, radiating elegance and refinement at every turn.
-          </p>
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Max Moto Detailing Logo">
+            Max Moto Detailing
+          </a>
+          <p>Experience the prestige of a professionally detailed car, radiating elegance and refinement at every turn.</p>
         </div>
 
         <div class="footer-links-group">
@@ -368,10 +413,10 @@
           <div class="footer-col">
             <h4>Website</h4>
             <ul>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -391,18 +436,20 @@
       <div class="footer-bottom">
         <span class="footer-copyright">Max Moto Detailing &copy; 2026</span>
         <div class="footer-legal">
-          <a href="#">Cookies policy</a>
-          <a href="#">Terms of service</a>
-          <a href="#">Privacy policy</a>
+          <a href="cookies-policy.html">Cookies policy</a>
+          <a href="terms-of-service.html">Terms of service</a>
+          <a href="privacy-policy.html">Privacy policy</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
-    // ===== NAVBAR SCROLL EFFECT =====
     const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
 
+    // ===== NAVBAR SCROLL EFFECT =====
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
@@ -412,20 +459,45 @@
     });
 
     // ===== MOBILE MENU TOGGLE =====
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
 
-    // Close menu on link click
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
+    // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+    document.querySelectorAll('a').forEach(anchor => {
+      const href = anchor.getAttribute('href');
+      if (href && href.includes('#')) {
+        anchor.addEventListener('click', function (e) {
+          const parts = href.split('#');
+          const hash = parts[1];
+          const path = parts[0];
+          if (!hash) return;
+
+          // Check if we are on index.html or root
+          const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || window.location.pathname === '';
+          const targetIsHomeHash = path === '' || path === 'index.html';
+
+          if (isHomePage && targetIsHomeHash) {
+            const target = document.getElementById(hash);
+            if (target) {
+              e.preventDefault();
+              // Close mobile menu if open
+              navToggle.classList.remove('active');
+              navMenu.classList.remove('active');
+
+              const navbarHeight = navbar.offsetHeight;
+              const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+              // Update URL hash without jumping
+              window.history.pushState(null, null, '#' + hash);
+            }
+          }
+        });
+      }
     });
 
     // ===== SCROLL REVEAL ANIMATION =====

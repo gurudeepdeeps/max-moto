@@ -1,0 +1,1203 @@
+/* ===== EXACT CLONE SERVICE DETAIL STYLES ===== */
+.service-details-page {
+  background: #000000;
+  color: #ffffff;
+  padding-top: 100px; /* Space for fixed navbar */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Common Layout */
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.spaced-section {
+  margin-top: 100px;
+}
+
+/* Custom Hero Section (Card-based like screenshot) */
+.hero-card {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.hero-card-content {
+  position: relative;
+  z-index: 3;
+  padding: 40px;
+}
+
+.hero-card-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+/* Pill Buttons */
+.hero-btns-pill {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-pill {
+  padding: 12px 32px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-pill-black {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-pill-white {
+  background: #ffffff;
+  color: #000000;
+}
+
+.btn-pill-black:hover { opacity: 0.8; }
+.btn-pill-white:hover { opacity: 0.9; }
+
+/* Expertise Section (The content sections) */
+.content-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  padding: 40px 60px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+.section-title-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.step-badge {
+  width: 32px;
+  height: 32px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Feature Grid inside cards */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.expertise-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.expertise-item {
+  display: flex;
+  gap: 12px;
+}
+
+.check-icon-wrap {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.check-icon-wrap svg {
+  width: 12px;
+  height: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.expertise-item-text p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.expertise-item-text strong {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* List details (Pricing/Warranty) */
+.details-list {
+  list-style: none;
+  padding: 0;
+}
+
+.details-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.details-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.details-list li strong {
+  color: #ffffff;
+}
+
+/* Three-Column Info Cards (Why Choose / Types / Why Us) */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(100, 80, 200, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.info-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-check-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.info-check-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: rgba(80, 180, 140, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.info-check-icon svg {
+  width: 12px;
+  height: 12px;
+  color: rgba(100, 220, 160, 0.9);
+}
+
+.info-check-item p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-section {
+    padding: 30px;
+  }
+  .info-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-split-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .intro-text-side h2 {
+    font-size: 2.8rem;
+  }
+}
+
+/* 3D Configurator Styles */
+.config-container {
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 40px;
+  color: #000000;
+  margin-bottom: 80px;
+}
+
+.config-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.config-tab {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #f4f4f4;
+  color: #666666;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.config-tab:hover {
+  background: #eeeeee;
+}
+
+.config-tab.active {
+  background: #007BFF;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.config-visual {
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.config-visual img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 12px;
+  transition: opacity 0.4s ease;
+}
+
+.config-info {
+  padding: 0 10px;
+}
+
+.config-info h3 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.config-info ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 40px;
+}
+
+.config-info li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 1.05rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.config-info li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .config-container {
+    padding: 30px 20px;
+  }
+  .config-info ul {
+    grid-template-columns: 1fr;
+  }
+  .config-info h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Zoom Controls UI */
+.zoom-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.zoom-btn {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  color: #000000;
+  padding: 0 0 4px 0; /* Align the plus/minus */
+  line-height: 1;
+}
+
+.zoom-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn:active {
+  transform: scale(0.95);
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 32px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: #161616;
+}
+
+.benefit-card h3 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.checkmark-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkmark-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 2px;
+}
+
+.check-icon::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #999;
+}
+
+.check-content strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.check-content p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dark-card {
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 1100px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+/* Service Split Intro (Two columns: Text/Image) */
+.service-split-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.intro-text-side h2 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.intro-text-side .sub-header {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.intro-text-side .body-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.intro-image-side img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+@media (max-width: 1024px) {
+  .service-split-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .intro-text-side h2 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Interior Detailing Specific Styles */
+.clash-font {
+  font-family: 'Clash Display', sans-serif;
+}
+
+.large-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.detail-intro-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 100px auto 60px;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Vehicle Selector */
+.vehicle-selector-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 20px 0 60px;
+}
+
+.vehicle-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 100%;
+}
+
+.vehicle-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.v-tab {
+  flex: 0 0 auto; /* Prevent tabs from shrinking */
+  background: transparent;
+  color: #888;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.v-tab.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.v-tab:hover:not(.active) {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Vehicle Image Display */
+.vehicle-image-display {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.car-display-box {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; /* Prevent layout shift */
+}
+
+#carDisplayImage {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  transition: opacity 0.15s ease-in-out;
+  filter: brightness(1.05) contrast(1.05); /* Blow out off-white shades to pure white */
+}
+
+/* Packages Dual Cards */
+.packages-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.package-card {
+  background: #111;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.package-card.featured {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: #161616;
+}
+
+.card-image-wrap {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.package-card:hover .card-image-wrap img {
+  transform: scale(1.05);
+}
+
+.duration-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+  padding: 40px;
+}
+
+.card-body h3 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.checklist .check {
+  color: #555;
+  font-weight: bold;
+}
+
+/* Other Services Grid */
+.other-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.service-item-card {
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 32px;
+  transition: all 0.3s ease;
+}
+
+.service-item-card:hover {
+  background: #0a0a0a;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.s-icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.service-item-card h4 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-item-card p {
+  font-size: 0.95rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* FAQ Section Styling */
+.faq-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  background: #111;
+  padding: 100px 80px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 60px;
+}
+
+.faq-left h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.faq-left p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  max-width: 300px;
+}
+
+.faq-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.faq-question .arrow {
+  font-size: 0.9rem;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer p {
+  padding-bottom: 30px;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .faq-question .arrow {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .faq-container {
+    grid-template-columns: 1fr;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+  .faq-left h2 {
+    font-size: 2.5rem;
+  }
+  .packages-dual {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .other-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   ULGO WINDOW TINT LAYOUT STYLES
+   ========================================================== */
+
+/* Hero Image Section Strip */
+.tint-hero {
+  width: 100%;
+  padding-top: 100px;
+  background: var(--bg-black);
+}
+
+.tint-hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tint-simulator-wrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.tint-simulator-image-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.tint-simulator-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  z-index: 2;
+}
+
+.tint-panel {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  border-right: 1px dashed rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(1px); /* Slight blur for realistic tint look */
+}
+
+.tint-panel:last-child {
+  border-right: none;
+}
+
+.tint-panel:hover {
+  flex: 1.5;
+  background: rgba(0, 0, 0, 0.4) !important; /* highlight effect on hover */
+  backdrop-filter: blur(0px);
+}
+
+.tint-label {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  pointer-events: none; /* so hover doesn't blip */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.tint-label span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.tint-panel:hover .tint-label {
+  transform: translateX(-50%) translateY(-10px);
+}
+
+/* Base Panel Section */
+.ulgo-panel-section {
+  padding: 40px 0;
+  background: var(--bg-black);
+}
+
+.ulgo-panel {
+  background: #0f0f0f;
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+/* Header inside Panel */
+.ulgo-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.ulgo-panel-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ulgo-icon {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px;
+  flex-shrink: 0;
+  color: var(--accent-red);
+}
+
+.ulgo-panel-header h2 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Badge ID */
+.ulgo-badge {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Panel Body */
+.ulgo-panel-body p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.ulgo-panel-body ul {
+  list-style: disc inside;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  padding-left: 20px;
+}
+
+/* Grid Section */
+.ulgo-features-section {
+  padding: 40px 0;
+  background: var(--bg-black);
+}
+
+.ulgo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ulgo-grid-card {
+  background: #0f0f0f;
+  border-radius: 20px;
+  padding: 35px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.ulgo-grid-card h3 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-weight: 500;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ulgo-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ulgo-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ulgo-check-list li .chk {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  margin-top: 3px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .ulgo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ulgo-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .ulgo-panel-header .header-right {
+    align-self: flex-start;
+  }
+  
+  .ulgo-panel {
+    padding: 25px;
+    margin: 20px auto;
+  }
+
+  .tint-hero {
+    padding-top: 100px;
+  }
+}
