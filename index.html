@@ -30,6 +30,7 @@
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="showcase.css">
 </head>
 
 <body>
@@ -75,6 +76,48 @@
       <div class="hero-glow"></div>
     </div>
   </section>
+
+  <!-- ===== STUDIO SHOWCASE (9:16 VIDEO) ===== -->
+  <section class="studio-showcase reveal" id="showcase">
+    <div class="container mobile-container">
+      <div class="section-header reveal">
+        <span class="label">Craftsmanship in motion</span>
+        <h2>The Studio Experience</h2>
+      </div>
+      <div class="showcase-video-wrapper reveal">
+        <div class="reel-mockup">
+          <video id="reelVideo" autoplay muted loop playsinline controls class="reel-video">
+            <source src="videos/max-moto-reel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button id="unmuteBtn" class="unmute-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+            <span>Unmute for Sound</span>
+          </button>
+          <div class="reel-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMute() {
+      const video = document.getElementById('reelVideo');
+      const btn = document.getElementById('unmuteBtn');
+      const text = btn.querySelector('span');
+      video.muted = !video.muted;
+      if (video.muted) {
+        text.innerText = 'Unmute for Sound';
+        btn.classList.remove('active');
+      } else {
+        text.innerText = 'Mute';
+        btn.classList.add('active');
+      }
+    }
+    document.getElementById('unmuteBtn').addEventListener('click', toggleMute);
+  </script>
 
   <!-- ===== SERVICES SECTION ===== -->
   <section class="services" id="services">
@@ -159,23 +202,6 @@
     </div>
   </section>
 
-  <!-- ===== VIDEO SHOWCASE SECTION ===== -->
-  <section class="video-showcase" id="showroom">
-    <div class="container">
-      <div class="video-card reveal">
-        <img src="images/video-car.jpg" alt="Luxury car rear angle in studio" loading="lazy">
-        <div class="video-overlay">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="8,5 20,12 8,19" />
-            </svg>
-          </div>
-          <span>Play showroom</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== PRICING SECTION ===== -->
   <section class="pricing-section" id="pricing">
     <div class="container">
@@ -225,11 +251,11 @@
             <li>Iron Decontamination</li>
             <li>Deep Carpet Extraction</li>
           </ul>
-          <a href="#contact" class="btn-plan">Select Plan</a>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- ===== FEATURES SECTION ===== -->
   <section class="features" id="about">
@@ -316,9 +342,9 @@
               </svg>
             </div>
             <div class="contact-details">
-              <a href="tel:+919876543210">
+              <a href="tel:+916362760386">
                 <h4>Call us</h4>
-                <span>+91 98765 43210</span>
+                <span>+91 6362760386</span>
               </a>
             </div>
           </div>
@@ -333,9 +359,9 @@
               </svg>
             </div>
             <div class="contact-details">
-              <a href="https://wa.me/919876543210" target="_blank">
+              <a href="https://wa.me/916362760386" target="_blank">
                 <h4>WhatsApp</h4>
-                <span>+91 98765 43210</span>
+                <span>+91 6362760386</span>
               </a>
             </div>
           </div>
@@ -348,9 +374,9 @@
               </svg>
             </div>
             <div class="contact-details">
-              <a href="mailto:info@max-moto.vercel.app">
+              <a href="mailto:info@maxmoto">
                 <h4>Email us</h4>
-                <span>info@max-moto.vercel.app</span>
+                <span>info@maxmoto</span>
               </a>
             </div>
           </div>
@@ -363,10 +389,28 @@
               </svg>
             </div>
             <div class="contact-details">
-              <a href="https://share.google/9cTgDesy1Wb5EWJMX">
-                <h4>Visit us</h4>
-                <span>Tumakuru, Karnataka, India</span>
-              </a>
+              <h4>Visit Studio</h4>
+              <p>Geddalahalli, 80ft main road, beside Jai Bhavani electricals, Jayanagar South,<br>Tumkur, Karnataka
+                572102</p>
+              <a href="https://share.google/ufNwLscj0ld3ZfvDD" target="_blank"
+                style="color: var(--accent); font-weight: 500; display: inline-block; margin-top: 8px;">View on Google
+                Maps →</a>
+            </div>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <!-- Clock Icon -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h4>Working Hours</h4>
+              <p>Mon - Sat: 09:00 - 19:00<br>Sunday: Closed</p>
             </div>
           </div>
         </div>
@@ -513,12 +557,12 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove('visible');
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -60px 0px'
+      threshold: 0.1
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
@@ -545,5 +589,3 @@
 </body>
 
 </html>
-
-
