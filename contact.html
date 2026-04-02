@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="index.css">
   <style>
     .contact-hero {
-      padding: 180px 0 100px;
+      padding: 160px 0 80px;
       background: #000;
       position: relative;
     }
@@ -37,17 +37,37 @@
       margin-top: 50px;
     }
 
+    .contact-info-card {
+      background: #111;
+      padding: 50px;
+      border-radius: 30px;
+      border: 1px solid #222;
+    }
+
     @media (max-width: 991px) {
       .contact-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    .contact-info-card {
-      background: #111;
-      padding: 50px;
-      border-radius: 30px;
-      border: 1px solid #222;
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 120px 0 60px;
+      }
+      .contact-info-card, .contact-form-wrap {
+        padding: 30px 20px;
+        border-radius: 20px;
+      }
+      .method-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .map-section {
+        padding: 60px 0;
+      }
+      .map-container {
+        height: 300px;
+      }
     }
 
     .contact-method {
@@ -349,3 +369,4 @@
   </script>
 </body>
 </html>
+

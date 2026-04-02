@@ -25,11 +25,11 @@
   <link rel="stylesheet" href="index.css">
   <style>
     .about-hero {
-      padding: 180px 0 100px;
-      min-height: 80vh;
+      padding: 100px 0 60px;
+      min-height: 50vh;
       display: flex;
       align-items: center;
-      background: #000; /* Pure black background as requested */
+      background: #000;
       position: relative;
       overflow: hidden;
     }
@@ -44,13 +44,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
-    }
-
-    @media (max-width: 991px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
     }
 
     .stats-grid {
@@ -98,6 +91,40 @@
       height: 50px;
       color: #0090ff;
       margin-bottom: 25px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 991px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 80px 0 40px;
+        min-height: auto;
+      }
+
+      .about-content-section {
+        padding: 60px 0;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        text-align: center;
+        
+      }
+
+      .stat-item h4 {
+        font-size: 2rem;
+      }
+
+      .why-choose-us {
+        padding: 60px 0;
+      }
     }
   </style>
 </head>
@@ -263,3 +290,5 @@
   </script>
 </body>
 </html>
+
+

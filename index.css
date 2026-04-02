@@ -294,6 +294,23 @@ p {
   margin-top: 10px;
 }
 
+@media (max-width: 480px) {
+  .hero-btns {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-btns .btn-connect {
+    padding: 12px 14px;
+    font-size: 0.8rem;
+    min-width: fit-content;
+    white-space: nowrap;
+  }
+}
+
 .hero-image-wrapper {
   position: relative;
   margin-top: -80px;
@@ -451,20 +468,48 @@ p {
 
 @media (max-width: 768px) {
   .services-grid-new {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   
+  .services-header-new {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
   .services-outer-container {
     padding: 40px 20px;
     border-radius: 24px;
   }
 
   .service-card-new {
-    aspect-ratio: 4 / 3;
+    height: 240px;
+  }
+
+  .card-info-new {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    gap: 8px;
+  }
+
+  .card-info-new h3 {
+    font-size: 1rem;
+  }
+
+  .card-arrow-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card-arrow-icon svg {
+    width: 14px;
+    height: 14px;
   }
 
   .services-header-new h2 {
     font-size: 2.2rem;
+    text-align: center;
   }
 }
 
@@ -1301,7 +1346,7 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    font-size: clamp(2rem, 9vw, 2.8rem);
   }
 
   .hero p {
@@ -1405,6 +1450,23 @@ p {
     flex-wrap: wrap;
     gap: 16px;
   }
+
+  .features-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .features-divider {
+    display: none;
+  }
+
+  .cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-image {
+    order: -1; /* Image on top for mobile */
+  }
 }
 
 /* ===== RESPONSIVE: SMALL MOBILE ===== */
@@ -1466,4 +1528,59 @@ p {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.25);
+}
+
+/* GLOBAL MOBILE RESPONSIVE FIXES */
+@media screen and (max-width: 768px) {
+  .stats-grid,
+  .info-cards-grid,
+  .expertise-grid,
+  .benefits-grid,
+  .packages-dual,
+  .other-services-grid,
+  .film-cards-grid,
+  .ulgo-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Centering Fix for Services Header */
+  .services-header-new {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .services-header-new h2 {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Force 2-Column Grid for All Screen Sizes under 768px */
+  .services-grid-new {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+
+  .service-card-new {
+    height: 220px !important;
+  }
+
+  .card-info-new h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .card-arrow-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .card-arrow-icon svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
 }
